@@ -1,0 +1,38 @@
+<core:FragmentDefinition
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core">
+
+  <Dialog id="_IDGenDialog" title="Add Employee">
+    <VBox id="_IDGenVBox" class="sapUiSmallMargin">
+
+      <Input id="empId" placeholder="Employee ID"/>
+      <Input id="empName" placeholder="Employee Name"/>
+      <Input id="empDept" placeholder="Department"/>
+      <Input id="empDesig" placeholder="Designation"/>
+      <Select id="empGender">
+        <items>
+          <core:Item id="_IDGenItem" key="Male" text="Male"/>
+          <core:Item id="_IDGenItem1" key="Female" text="Female"/>
+        </items>
+      </Select>
+      <Input id="empLocation" placeholder="Location"/>
+      <Input id="empSalary" type="Number" placeholder="Salary"/>
+      <Select id="empOffice">
+        <items>
+          <core:Item id="_IDGenItem2" key="India" text="India"/>
+          <core:Item id="_IDGenItem3" key="USA" text="USA"/>
+        </items>
+      </Select>
+
+    </VBox>
+
+    <beginButton>
+      <Button id="_IDGenButton3" text="Add" press="onSaveEmployee"/>
+    </beginButton>
+
+    <endButton>
+      <Button id="_IDGenButton4" text="Cancel" press="onCancel"/>
+    </endButton>
+
+  </Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,93 @@
+<mvc:View
+    controllerName="project4.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page id="_IDGenPage1" 
+          title="Employee Details"
+          showNavButton="true"
+          navButtonPress="onNavBack">
+
+        <!-- ✅ Top Right Update Button -->
+        <headerContent>
+            <Button id="_IDGenButton5"
+                text="Update"
+                type="Emphasized"
+                press="onUpdatePress"/>
+        </headerContent>
+
+        <content>
+
+            <ObjectHeader id="_IDGenObjectHeader"
+                title="{empModel>Name}"
+                number="Employee ID: {empModel>EmpId}" />
+
+            <VBox id="_IDGenVBox1" class="sapUiSmallMargin">
+                <Text id="_IDGenText17" text="Department: {empModel>Department}" />
+                <Text id="_IDGenText18" text="Designation: {empModel>Designation}" />
+                <Text id="_IDGenText19" text="Gender: {empModel>Gender}" />
+                <Text id="_IDGenText20" text="Location: {empModel>Location}" />
+                <Text id="_IDGenText21" text="Salary: {empModel>Salary}" />
+                <Text id="_IDGenText22" text="Office: {empModel>Office}" />
+            </VBox>
+
+        </content>
+
+        <!-- ✅ Update Salary Dialog -->
+        <!-- ✅ Update Employee Dialog -->
+<Dialog
+    id="updateDialog"
+    title="Update Employee"
+    draggable="true"
+    resizable="true">
+
+    <VBox id="_IDGenVBox2" class="sapUiSmallMargin" width="300px">
+
+        <Label id="_IDGenLabel" text="Employee ID"/>
+        <Input id="_IDGenInput" value="{empModel>EmpId}" editable="false"/>
+
+        <Label id="_IDGenLabel1" text="Name"/>
+        <Input id="_IDGenInput1" value="{empModel>Name}" editable="false"/>
+
+        <Label id="_IDGenLabel2" text="Department"/>
+        <Input id="_IDGenInput2" value="{empModel>Department}" editable="false"/>
+
+        <Label id="_IDGenLabel3" text="Designation"/>
+        <Input id="_IDGenInput3" value="{empModel>Designation}" editable="false"/>
+
+        <Label id="_IDGenLabel4" text="Gender"/>
+        <Input id="_IDGenInput4" value="{empModel>Gender}" editable="false"/>
+
+        <Label id="_IDGenLabel5" text="Location"/>
+        <Input id="_IDGenInput5" value="{empModel>Location}" editable="false"/>
+
+        <Label id="_IDGenLabel6" text="Salary"/>
+        <Input
+            id="updateSalaryInput"
+            value="{empModel>Salary}"
+            type="Number"
+            editable="true"/>
+
+        <Label id="_IDGenLabel7" text="Office"/>
+        <Input id="_IDGenInput6" value="{empModel>Office}" editable="false"/>
+
+    </VBox>
+
+    <beginButton>
+        <Button id="_IDGenButton6"
+            text="Update"
+            type="Emphasized"
+            press="onConfirmUpdate"/>
+    </beginButton>
+
+    <endButton>
+        <Button id="_IDGenButton7"
+            text="Cancel"
+            press="onCancelUpdate"/>
+    </endButton>
+
+</Dialog>
+
+
+    </Page>
+</mvc:View>
