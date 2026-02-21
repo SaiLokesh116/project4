@@ -18,13 +18,15 @@
 
                 <ToolbarSpacer id="_IDGenToolbarSpacer"/>
 
-                <SearchField id="_IDGenSearchField" width="200px"
-                             liveChange="onSearch"/>
+                <SearchField id="_IDGenSearchField" width="300px"
+                             liveChange="onSearch"
+                             placeholder="Search by Employee ID or Name" />
             </Toolbar>
 
             <Table id="empTable"
                    items="{empModel>/Employees}"
-                   mode="SingleSelectLeft">
+                   mode="MultiSelect"
+                   noDataText="No Employees Found">
 
                 <columns>
                     <Column id="_IDGenColumn"><Text id="_IDGenText1" text="Employee ID"/></Column>
